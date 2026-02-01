@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Alpha";
+    src: local("Impact");
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.font-alpha {
+    font-family: "Alpha", sans-serif;
+    letter-spacing: -0.05em;
+}
+
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-gradient-custom {
+    background: radial-gradient(circle at 20% 30%, #1a0b2e 0%, #090513 100%);
+}

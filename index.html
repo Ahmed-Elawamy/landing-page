@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Virtual Reality Landing Page</title>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Poppins:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css">
+        <!-- Alpha font -->
+        <!-- <style>
+            @font-face {
+                font-family: "Alpha";
+                src: local("Impact");
+            }
+
+            body {
+                font-family: "Inter", sans-serif;
+            }
+
+            .font-alpha {
+                font-family: "Alpha", sans-serif;
+                letter-spacing: -0.05em;
+            }
+
+            .font-poppins {
+                font-family: "Poppins", sans-serif;
+            }
+
+            .bg-gradient-custom {
+                background: radial-gradient(
+                    circle at 20% 30%,
+                    #1a0b2e 0%,
+                    #090513 100%
+                );
+            }
+        </style> -->
+    </head>
+
+    <body class="bg-gradient-custom text-white min-h-screen overflow-x-hidden">
+        <!-- NAVBAR -->
+        <nav
+            class="flex items-center justify-between px-5 md:px-10 py-5 max-w-7xl mx-auto relative z-50"
+        >
+            <div class="text-xl md:text-2xl font-black tracking-tighter">
+                Elawamy
+            </div>
+
+            <!-- Hamburger Menu -->
+            <button
+                id="menuBtn"
+                class="md:hidden text-white text-2xl focus:outline-none transition-transform"
+            >
+                ☰
+            </button>
+
+            <!-- Desktop Menu -->
+            <ul
+                class="hidden md:flex space-x-8 text-sm font-medium text-gray-300"
+            >
+                <li><a href="#" class="text-white">Home</a></li>
+                <li><a href="#" class="hover:text-white">About</a></li>
+                <li><a href="#" class="hover:text-white">Services</a></li>
+                <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+
+            <div class="hidden md:flex space-x-3">
+                <button
+                    class="bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-2 rounded-full text-sm font-bold hover:opacity-90 transition"
+                >
+                    Login
+                </button>
+                <button
+                    class="border border-purple-500 px-6 py-2 rounded-full text-sm font-bold hover:bg-purple-500 transition"
+                >
+                    Sign Up
+                </button>
+            </div>
+
+            <!-- MOBILE MENU  -->
+            <div
+                id="mobileMenu"
+                class="hidden absolute top-full left-0 w-full bg-[#0b0616] border-t border-purple-500/30 md:hidden"
+            >
+                <div class="max-w-7xl mx-auto px-5 py-8">
+                    <ul
+                        class="flex flex-col space-y-6 text-lg font-semibold text-gray-200"
+                    >
+                        <li>
+                            <a href="#" class="block hover:text-purple-400"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="block hover:text-purple-400"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="block hover:text-purple-400"
+                                >Services</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="block hover:text-purple-400"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-col space-y-3 mt-8">
+                        <button
+                            class="bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-2 rounded-full text-sm font-bold"
+                        >
+                            Login
+                        </button>
+                        <button
+                            class="border border-purple-500 px-6 py-2 rounded-full text-sm font-bold"
+                        >
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobileMenu"
+            class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex-col items-center justify-center space-y-8 text-xl"
+        >
+            <button id="closeMenu" class="absolute top-6 right-6 text-3xl">
+                ✕
+            </button>
+
+            <a href="#" class="hover:text-purple-400">Home</a>
+            <a href="#" class="hover:text-purple-400">About</a>
+            <a href="#" class="hover:text-purple-400">Services</a>
+            <a href="#" class="hover:text-purple-400">Contact</a>
+
+            <div class="flex gap-4 mt-6">
+                <button
+                    class="bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-2 rounded-full text-sm font-bold"
+                >
+                    Login
+                </button>
+                <button
+                    class="border border-purple-500 px-6 py-2 rounded-full text-sm font-bold"
+                >
+                    Sign Up
+                </button>
+            </div>
+        </div>
+
+        <!-- HERO -->
+        <main
+            class="max-w-7xl mx-auto px-5 md:px-10 mt-12 flex flex-col-reverse md:flex-row items-center gap-12"
+        >
+            <!-- TEXT -->
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h1
+                    class="font-alpha text-5xl sm:text-6xl md:text-[8rem] uppercase leading-[0.95] mb-6"
+                >
+                    Landing <br />
+                    Page
+                </h1>
+
+                <div class="flex flex-col items-center md:flex-row">
+                    <img src="./shape.png" alt="shape" class="w-[50px] h-[61px] "/> Beautiful design -
+                    Fast performance - Real results.
+                    <p
+                        class="font-poppins text-lg sm:text-xl text-gray-300 max-w-md mx-auto md:mx-0 mb-10"
+                    ></p>
+                </div>
+
+                <div
+                    class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
+                >
+                    <button
+                        class="bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-3 rounded-full font-bold"
+                    >
+                        Get Started
+                    </button>
+                    <button
+                        class="border border-purple-500 px-8 py-3 rounded-full font-bold hover:bg-purple-500 transition"
+                    >
+                        Contact Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="relative w-full md:w-1/2 flex justify-center">
+                <div
+                    class="absolute w-[300px] sm:w-[380px] md:w-[450px] h-[300px] sm:h-[380px] md:h-[450px] bg-[#7419f7] rounded-full blur-[100px] opacity-40"
+                ></div>
+
+                <img
+                    src="./vr.png"
+                    class="relative z-10 w-[280px] sm:w-[360px] md:w-[450px]"
+                    alt="VR"
+                />
+            </div>
+        </main>
+
+        <!-- JS -->
+        <script>
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            let open = false;
+
+            menuBtn.addEventListener("click", () => {
+                open = !open;
+
+                if (open) {
+                    mobileMenu.classList.remove("hidden");
+                    menuBtn.textContent = "✖";
+                    menuBtn.style.transform = "rotate(90deg)";
+                } else {
+                    mobileMenu.classList.add("hidden");
+                    menuBtn.textContent = "☰";
+                    menuBtn.style.transform = "rotate(0deg)";
+                }
+            });
+        </script>
+    </body>
+</html>
