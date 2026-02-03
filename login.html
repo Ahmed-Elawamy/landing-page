@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="ar" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Poppins:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="bg-gradient-custom text-white min-h-screen">
+        <nav class="flex items-center justify-between px-5 md:px-10 py-5 max-w-7xl mx-auto">
+            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter">Elawamy</a>
+            <div class="flex items-center gap-4 text-sm">
+                <a href="index.html#contact" class="text-gray-300 hover:text-white">Contact</a>
+                <a href="signup.html" class="border border-purple-500 px-4 py-2 rounded-full font-bold hover:bg-purple-500 transition">Sign Up</a>
+            </div>
+        </nav>
+
+        <main class="max-w-7xl mx-auto px-5 md:px-10 py-16 flex items-center justify-center">
+            <div class="w-full max-w-md bg-white/5 border border-white/10 rounded-3xl p-8">
+                <h1 class="font-alpha text-4xl mb-2">Welcome Back</h1>
+                <p class="text-gray-300 mb-6">Log in to continue your VR journey.</p>
+
+                <form class="space-y-4">
+                    <input
+                        type="email"
+                        placeholder="Email address"
+                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+                    />
+                    <button
+                        type="button"
+                        class="w-full bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-3 rounded-full font-bold"
+                    >
+                        Login
+                    </button>
+                </form>
+
+                <div class="text-sm text-gray-300 mt-6">
+                    New here? <a href="signup.html" class="text-white hover:text-purple-300">Create an account</a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

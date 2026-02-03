@@ -58,31 +58,34 @@
             <button
                 id="menuBtn"
                 class="md:hidden text-white text-2xl focus:outline-none transition-transform"
+                aria-label="Toggle menu"
             >
-                ☰
+                &#9776;
             </button>
 
             <!-- Desktop Menu -->
             <ul
                 class="hidden md:flex space-x-8 text-sm font-medium text-gray-300"
             >
-                <li><a href="#" class="text-white">Home</a></li>
-                <li><a href="#" class="hover:text-white">About</a></li>
-                <li><a href="#" class="hover:text-white">Services</a></li>
-                <li><a href="#" class="hover:text-white">Contact</a></li>
+                <li><a href="#home" class="text-white">Home</a></li>
+                <li><a href="#about" class="hover:text-white">About</a></li>
+                <li><a href="#services" class="hover:text-white">Services</a></li>
+                <li><a href="#contact" class="hover:text-white">Contact</a></li>
             </ul>
 
             <div class="hidden md:flex space-x-3">
-                <button
+                <a
+                    href="login.html"
                     class="bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-2 rounded-full text-sm font-bold hover:opacity-90 transition"
                 >
                     Login
-                </button>
-                <button
+                </a>
+                <a
+                    href="signup.html"
                     class="border border-purple-500 px-6 py-2 rounded-full text-sm font-bold hover:bg-purple-500 transition"
                 >
                     Sign Up
-                </button>
+                </a>
             </div>
 
             <!-- MOBILE MENU  -->
@@ -95,73 +98,48 @@
                         class="flex flex-col space-y-6 text-lg font-semibold text-gray-200"
                     >
                         <li>
-                            <a href="#" class="block hover:text-purple-400"
+                            <a href="#home" class="block hover:text-purple-400"
                                 >Home</a
                             >
                         </li>
                         <li>
-                            <a href="#" class="block hover:text-purple-400"
+                            <a href="#about" class="block hover:text-purple-400"
                                 >About</a
                             >
                         </li>
                         <li>
-                            <a href="#" class="block hover:text-purple-400"
+                            <a href="#services" class="block hover:text-purple-400"
                                 >Services</a
                             >
                         </li>
                         <li>
-                            <a href="#" class="block hover:text-purple-400"
+                            <a href="#contact" class="block hover:text-purple-400"
                                 >Contact</a
                             >
                         </li>
                     </ul>
 
                     <div class="flex flex-col space-y-3 mt-8">
-                        <button
-                            class="bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-2 rounded-full text-sm font-bold"
+                        <a
+                            href="login.html"
+                            class="bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-2 rounded-full text-sm font-bold text-center"
                         >
                             Login
-                        </button>
-                        <button
-                            class="border border-purple-500 px-6 py-2 rounded-full text-sm font-bold"
+                        </a>
+                        <a
+                            href="signup.html"
+                            class="border border-purple-500 px-6 py-2 rounded-full text-sm font-bold text-center"
                         >
                             Sign Up
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- Mobile Menu -->
-        <div
-            id="mobileMenu"
-            class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex-col items-center justify-center space-y-8 text-xl"
-        >
-            <button id="closeMenu" class="absolute top-6 right-6 text-3xl">
-                ✕
-            </button>
-
-            <a href="#" class="hover:text-purple-400">Home</a>
-            <a href="#" class="hover:text-purple-400">About</a>
-            <a href="#" class="hover:text-purple-400">Services</a>
-            <a href="#" class="hover:text-purple-400">Contact</a>
-
-            <div class="flex gap-4 mt-6">
-                <button
-                    class="bg-gradient-to-r from-purple-500 to-fuchsia-500 px-6 py-2 rounded-full text-sm font-bold"
-                >
-                    Login
-                </button>
-                <button
-                    class="border border-purple-500 px-6 py-2 rounded-full text-sm font-bold"
-                >
-                    Sign Up
-                </button>
-            </div>
-        </div>
-
         <!-- HERO -->
         <main
+            id="home"
             class="max-w-7xl mx-auto px-5 md:px-10 mt-12 flex flex-col-reverse md:flex-row items-center gap-12"
         >
             <!-- TEXT -->
@@ -182,18 +160,20 @@
                 </div>
 
                 <div
-                    class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
+                    class="btns flex flex-col sm:flex-row justify-center md:justify-start gap-4"
                 >
-                    <button
-                        class="bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-3 rounded-full font-bold"
+                    <a
+                        href="#services"
+                        class="bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-3 rounded-full font-bold text-center"
                     >
                         Get Started
-                    </button>
-                    <button
-                        class="border border-purple-500 px-8 py-3 rounded-full font-bold hover:bg-purple-500 transition"
+                    </a>
+                    <a
+                        href="#contact"
+                        class="border border-purple-500 px-8 py-3 rounded-full font-bold hover:bg-purple-500 transition text-center"
                     >
                         Contact Now
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -211,6 +191,144 @@
             </div>
         </main>
 
+        <!-- ABOUT -->
+        <section id="about" class="max-w-7xl mx-auto px-5 md:px-10 py-16">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.3em] text-purple-300">
+                        About
+                    </p>
+                    <h2 class="font-alpha text-4xl md:text-5xl mt-3 mb-5">
+                        We Build Immersive Experiences
+                    </h2>
+                    <p class="font-poppins text-gray-300 leading-7">
+                        We blend design, engineering, and storytelling to create
+                        virtual worlds that feel effortless to explore. From
+                        concept to launch, our team focuses on clarity, speed,
+                        and measurable results.
+                    </p>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
+                    <div class="grid grid-cols-2 gap-6 text-center">
+                        <div class="py-6 rounded-2xl bg-white/5">
+                            <p class="text-3xl font-black">120+</p>
+                            <p class="text-sm text-gray-300">Projects</p>
+                        </div>
+                        <div class="py-6 rounded-2xl bg-white/5">
+                            <p class="text-3xl font-black">18</p>
+                            <p class="text-sm text-gray-300">Industries</p>
+                        </div>
+                        <div class="py-6 rounded-2xl bg-white/5">
+                            <p class="text-3xl font-black">4.9</p>
+                            <p class="text-sm text-gray-300">Rating</p>
+                        </div>
+                        <div class="py-6 rounded-2xl bg-white/5">
+                            <p class="text-3xl font-black">24/7</p>
+                            <p class="text-sm text-gray-300">Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="max-w-7xl mx-auto px-5 md:px-10 py-16">
+            <div class="text-center mb-10">
+                <p class="text-sm uppercase tracking-[0.3em] text-purple-300">
+                    Services
+                </p>
+                <h2 class="font-alpha text-4xl md:text-5xl mt-3">
+                    Everything You Need To Launch
+                </h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-xl font-bold mb-2">XR Strategy</h3>
+                    <p class="text-gray-300">
+                        Discovery, research, and roadmap planning tailored to
+                        your business goals.
+                    </p>
+                </div>
+                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-xl font-bold mb-2">3D Production</h3>
+                    <p class="text-gray-300">
+                        Realistic environments, optimized assets, and smooth
+                        performance across devices.
+                    </p>
+                </div>
+                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-xl font-bold mb-2">UX & Interaction</h3>
+                    <p class="text-gray-300">
+                        Intuitive navigation and interaction patterns designed
+                        for comfort and clarity.
+                    </p>
+                </div>
+                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-xl font-bold mb-2">Performance</h3>
+                    <p class="text-gray-300">
+                        Fast loading, efficient rendering, and stable FPS for
+                        every headset.
+                    </p>
+                </div>
+                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-xl font-bold mb-2">Analytics</h3>
+                    <p class="text-gray-300">
+                        Clear insights on engagement to help you iterate with
+                        confidence.
+                    </p>
+                </div>
+                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-xl font-bold mb-2">Launch Support</h3>
+                    <p class="text-gray-300">
+                        Go-live checklists, QA, and post-launch optimization.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="max-w-7xl mx-auto px-5 md:px-10 py-16">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.3em] text-purple-300">
+                        Contact
+                    </p>
+                    <h2 class="font-alpha text-4xl md:text-5xl mt-3 mb-5">
+                        Let's Talk About Your Project
+                    </h2>
+                    <p class="font-poppins text-gray-300 leading-7">
+                        Share a quick brief and we will reply within one
+                        business day. We can sign an NDA if needed.
+                    </p>
+                </div>
+                <form
+                    class="bg-white/5 border border-white/10 rounded-3xl p-8 space-y-4"
+                >
+                    <input
+                        type="text"
+                        placeholder="Full name"
+                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email address"
+                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+                    />
+                    <textarea
+                        rows="4"
+                        placeholder="Tell us about your idea..."
+                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+                    ></textarea>
+                    <button
+                        type="button"
+                        class="w-full bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-3 rounded-full font-bold"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
         <!-- JS -->
         <script>
             const menuBtn = document.getElementById("menuBtn");
@@ -222,11 +340,11 @@
 
                 if (open) {
                     mobileMenu.classList.remove("hidden");
-                    menuBtn.textContent = "✖";
+                    menuBtn.textContent = "\u2716";
                     menuBtn.style.transform = "rotate(90deg)";
                 } else {
                     mobileMenu.classList.add("hidden");
-                    menuBtn.textContent = "☰";
+                    menuBtn.textContent = "\u2630";
                     menuBtn.style.transform = "rotate(0deg)";
                 }
             });

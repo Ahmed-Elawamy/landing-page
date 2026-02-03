@@ -19,3 +19,26 @@ body {
 .bg-gradient-custom {
     background: radial-gradient(circle at 20% 30%, #1a0b2e 0%, #090513 100%);
 }
+.btns {
+    margin-bottom: 33px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.04);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    background: linear-gradient(
+        135deg,
+        rgba(116, 25, 247, 0.28),
+        rgba(236, 72, 153, 0.18)
+    );
+    border-color: rgba(168, 85, 247, 0.7);
+    box-shadow: 0 16px 36px rgba(116, 25, 247, 0.25);
+}
