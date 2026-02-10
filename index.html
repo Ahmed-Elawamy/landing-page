@@ -3,58 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Virtual Reality Landing Page</title>
+        <title>VR Glasses - Next-Gen Immersion</title>
 
-        <!-- Tailwind -->
         <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- Fonts -->
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Poppins:wght@300;400;500&display=swap"
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="style.css">
-        <!-- Alpha font -->
-        <!-- <style>
-            @font-face {
-                font-family: "Alpha";
-                src: local("Impact");
-            }
-
-            body {
-                font-family: "Inter", sans-serif;
-            }
-
-            .font-alpha {
-                font-family: "Alpha", sans-serif;
-                letter-spacing: -0.05em;
-            }
-
-            .font-poppins {
-                font-family: "Poppins", sans-serif;
-            }
-
-            .bg-gradient-custom {
-                background: radial-gradient(
-                    circle at 20% 30%,
-                    #1a0b2e 0%,
-                    #090513 100%
-                );
-            }
-        </style> -->
+        <link rel="stylesheet" href="style.css" />
     </head>
 
     <body class="bg-gradient-custom text-white min-h-screen overflow-x-hidden">
-        <!-- NAVBAR -->
         <nav
             class="flex items-center justify-between px-5 md:px-10 py-5 max-w-7xl mx-auto relative z-50"
         >
             <div class="text-xl md:text-2xl font-black tracking-tighter">
-                Elawamy
+                VIZAR
             </div>
 
-            <!-- Hamburger Menu -->
             <button
                 id="menuBtn"
                 class="md:hidden text-white text-2xl focus:outline-none transition-transform"
@@ -63,13 +31,14 @@
                 &#9776;
             </button>
 
-            <!-- Desktop Menu -->
             <ul
                 class="hidden md:flex space-x-8 text-sm font-medium text-gray-300"
             >
                 <li><a href="#home" class="text-white">Home</a></li>
                 <li><a href="#about" class="hover:text-white">About</a></li>
-                <li><a href="#services" class="hover:text-white">Services</a></li>
+                <li>
+                    <a href="#services" class="hover:text-white">Services</a>
+                </li>
                 <li><a href="#contact" class="hover:text-white">Contact</a></li>
             </ul>
 
@@ -88,10 +57,9 @@
                 </a>
             </div>
 
-            <!-- MOBILE MENU  -->
             <div
                 id="mobileMenu"
-                class="hidden absolute top-full left-0 w-full bg-[#0b0616] border-t border-purple-500/30 md:hidden"
+                class="absolute top-full left-0 w-full bg-[#0b0616] border-t border-purple-500/30 md:hidden"
             >
                 <div class="max-w-7xl mx-auto px-5 py-8">
                     <ul
@@ -108,12 +76,16 @@
                             >
                         </li>
                         <li>
-                            <a href="#services" class="block hover:text-purple-400"
+                            <a
+                                href="#services"
+                                class="block hover:text-purple-400"
                                 >Services</a
                             >
                         </li>
                         <li>
-                            <a href="#contact" class="block hover:text-purple-400"
+                            <a
+                                href="#contact"
+                                class="block hover:text-purple-400"
                                 >Contact</a
                             >
                         </li>
@@ -137,26 +109,26 @@
             </div>
         </nav>
 
-        <!-- HERO -->
         <main
             id="home"
             class="max-w-7xl mx-auto px-5 md:px-10 mt-12 flex flex-col-reverse md:flex-row items-center gap-12"
         >
-            <!-- TEXT -->
             <div class="w-full md:w-1/2 text-center md:text-left">
                 <h1
                     class="font-alpha text-5xl sm:text-6xl md:text-[8rem] uppercase leading-[0.95] mb-6"
                 >
-                    Landing <br />
-                    Page
+                    VR <br />
+                    Glasses
                 </h1>
 
                 <div class="flex flex-col items-center md:flex-row">
-                    <img src="./shape.png" alt="shape" class="w-[50px] h-[61px] "/> Beautiful design -
-                    Fast performance - Real results.
-                    <p
-                        class="font-poppins text-lg sm:text-xl text-gray-300 max-w-md mx-auto md:mx-0 mb-10"
-                    ></p>
+                    <img
+                        src="./shape.png"
+                        alt="shape"
+                        class="w-[50px] h-[61px]"
+                        fetchpriority="high"
+                    />
+                    Crystal-clear optics - Ultra-light fit - True immersion.
                 </div>
 
                 <div
@@ -166,188 +138,31 @@
                         href="#services"
                         class="bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-3 rounded-full font-bold text-center"
                     >
-                        Get Started
+                        Explore Models
                     </a>
                     <a
                         href="#contact"
                         class="border border-purple-500 px-8 py-3 rounded-full font-bold hover:bg-purple-500 transition text-center"
                     >
-                        Contact Now
+                        Talk to Us
                     </a>
                 </div>
             </div>
 
-            <!-- IMAGE -->
             <div class="relative w-full md:w-1/2 flex justify-center">
                 <div
                     class="absolute w-[300px] sm:w-[380px] md:w-[450px] h-[300px] sm:h-[380px] md:h-[450px] bg-[#7419f7] rounded-full blur-[100px] opacity-40"
                 ></div>
 
                 <img
+                    fetchpriority="high"
                     src="./vr.png"
-                    class="relative z-10 w-[280px] sm:w-[360px] md:w-[450px]"
+                    class="relative z-10 w-[280px] sm:w-[360px] md:w-[450px] vr-float"
                     alt="VR"
                 />
             </div>
         </main>
 
-        <!-- ABOUT -->
-        <section id="about" class="max-w-7xl mx-auto px-5 md:px-10 py-16">
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <div>
-                    <p class="text-sm uppercase tracking-[0.3em] text-purple-300">
-                        About
-                    </p>
-                    <h2 class="font-alpha text-4xl md:text-5xl mt-3 mb-5">
-                        We Build Immersive Experiences
-                    </h2>
-                    <p class="font-poppins text-gray-300 leading-7">
-                        We blend design, engineering, and storytelling to create
-                        virtual worlds that feel effortless to explore. From
-                        concept to launch, our team focuses on clarity, speed,
-                        and measurable results.
-                    </p>
-                </div>
-                <div class="bg-white/5 border border-white/10 rounded-3xl p-8">
-                    <div class="grid grid-cols-2 gap-6 text-center">
-                        <div class="py-6 rounded-2xl bg-white/5">
-                            <p class="text-3xl font-black">120+</p>
-                            <p class="text-sm text-gray-300">Projects</p>
-                        </div>
-                        <div class="py-6 rounded-2xl bg-white/5">
-                            <p class="text-3xl font-black">18</p>
-                            <p class="text-sm text-gray-300">Industries</p>
-                        </div>
-                        <div class="py-6 rounded-2xl bg-white/5">
-                            <p class="text-3xl font-black">4.9</p>
-                            <p class="text-sm text-gray-300">Rating</p>
-                        </div>
-                        <div class="py-6 rounded-2xl bg-white/5">
-                            <p class="text-3xl font-black">24/7</p>
-                            <p class="text-sm text-gray-300">Support</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section id="services" class="max-w-7xl mx-auto px-5 md:px-10 py-16">
-            <div class="text-center mb-10">
-                <p class="text-sm uppercase tracking-[0.3em] text-purple-300">
-                    Services
-                </p>
-                <h2 class="font-alpha text-4xl md:text-5xl mt-3">
-                    Everything You Need To Launch
-                </h2>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
-                    <h3 class="text-xl font-bold mb-2">XR Strategy</h3>
-                    <p class="text-gray-300">
-                        Discovery, research, and roadmap planning tailored to
-                        your business goals.
-                    </p>
-                </div>
-                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
-                    <h3 class="text-xl font-bold mb-2">3D Production</h3>
-                    <p class="text-gray-300">
-                        Realistic environments, optimized assets, and smooth
-                        performance across devices.
-                    </p>
-                </div>
-                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
-                    <h3 class="text-xl font-bold mb-2">UX & Interaction</h3>
-                    <p class="text-gray-300">
-                        Intuitive navigation and interaction patterns designed
-                        for comfort and clarity.
-                    </p>
-                </div>
-                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
-                    <h3 class="text-xl font-bold mb-2">Performance</h3>
-                    <p class="text-gray-300">
-                        Fast loading, efficient rendering, and stable FPS for
-                        every headset.
-                    </p>
-                </div>
-                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
-                    <h3 class="text-xl font-bold mb-2">Analytics</h3>
-                    <p class="text-gray-300">
-                        Clear insights on engagement to help you iterate with
-                        confidence.
-                    </p>
-                </div>
-                <div class="service-card p-7 rounded-2xl bg-white/5 border border-white/10">
-                    <h3 class="text-xl font-bold mb-2">Launch Support</h3>
-                    <p class="text-gray-300">
-                        Go-live checklists, QA, and post-launch optimization.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="max-w-7xl mx-auto px-5 md:px-10 py-16">
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <div>
-                    <p class="text-sm uppercase tracking-[0.3em] text-purple-300">
-                        Contact
-                    </p>
-                    <h2 class="font-alpha text-4xl md:text-5xl mt-3 mb-5">
-                        Let's Talk About Your Project
-                    </h2>
-                    <p class="font-poppins text-gray-300 leading-7">
-                        Share a quick brief and we will reply within one
-                        business day. We can sign an NDA if needed.
-                    </p>
-                </div>
-                <form
-                    class="bg-white/5 border border-white/10 rounded-3xl p-8 space-y-4"
-                >
-                    <input
-                        type="text"
-                        placeholder="Full name"
-                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
-                    />
-                    <input
-                        type="email"
-                        placeholder="Email address"
-                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
-                    />
-                    <textarea
-                        rows="4"
-                        placeholder="Tell us about your idea..."
-                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
-                    ></textarea>
-                    <button
-                        type="button"
-                        class="w-full bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-3 rounded-full font-bold"
-                    >
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </section>
-
-        <!-- JS -->
-        <script>
-            const menuBtn = document.getElementById("menuBtn");
-            const mobileMenu = document.getElementById("mobileMenu");
-            let open = false;
-
-            menuBtn.addEventListener("click", () => {
-                open = !open;
-
-                if (open) {
-                    mobileMenu.classList.remove("hidden");
-                    menuBtn.textContent = "\u2716";
-                    menuBtn.style.transform = "rotate(90deg)";
-                } else {
-                    mobileMenu.classList.add("hidden");
-                    menuBtn.textContent = "\u2630";
-                    menuBtn.style.transform = "rotate(0deg)";
-                }
-            });
-        </script>
+        <script src="./main.js"></script>
     </body>
 </html>
